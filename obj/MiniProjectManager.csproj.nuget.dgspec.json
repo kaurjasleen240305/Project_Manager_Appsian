@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/samrat.middha@zomato.com/Desktop/dev/placement/task2/MiniProjectManager/MiniProjectManager.csproj": {}
+  },
+  "projects": {
+    "/Users/samrat.middha@zomato.com/Desktop/dev/placement/task2/MiniProjectManager/MiniProjectManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/samrat.middha@zomato.com/Desktop/dev/placement/task2/MiniProjectManager/MiniProjectManager.csproj",
+        "projectName": "MiniProjectManager",
+        "projectPath": "/Users/samrat.middha@zomato.com/Desktop/dev/placement/task2/MiniProjectManager/MiniProjectManager.csproj",
+        "packagesPath": "/Users/samrat.middha@zomato.com/.nuget/packages/",
+        "outputPath": "/Users/samrat.middha@zomato.com/Desktop/dev/placement/task2/MiniProjectManager/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/samrat.middha@zomato.com/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/9.0.8/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/9.0.8/libexec/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
