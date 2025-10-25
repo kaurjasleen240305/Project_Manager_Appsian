@@ -1,12 +1,56 @@
-Mini Project Manager - Minimal .NET 8 Web API
+# 🧩 Mini Project Manager — Minimal .NET 8 Web API
 
-How to run:
-  1. Install .NET 8 SDK.
-  2. Open terminal in project folder.
-  3. Run: dotnet restore
-  4. Run: dotnet run
-  5. API available at http://localhost:5000 (or the port printed)
+A lightweight and efficient **Project Management REST API** built with **.NET 8**, designed as part of the **Appsian Logical Assignment**.  
+It provides a clean architecture, JWT authentication, and a simple SQLite database setup — ready to scale or deploy anywhere.
 
-Notes:
-  - Default JWT key is in appsettings.json; change it for production.
-  - Uses SQLite by default: Data Source=app.db
+---
+
+## 🚀 Features
+
+- 🧠 **Project & Task Management** — Create and track projects with ease.  
+- 🔐 **JWT Authentication** — Secure endpoints with token-based access.  
+- 💾 **SQLite Integration** — Lightweight and easy-to-use database for local development.  
+- ⚙️ **Minimal API Architecture** — Built on modern .NET 8 patterns.  
+- 🌍 **Cross-platform** — Runs seamlessly on Windows, macOS, or Linux.  
+
+---
+
+## 🧰 Tech Stack
+
+| Layer | Technology |
+|:------|:------------|
+| Backend | .NET 8 (C#) |
+| Database | SQLite |
+| Authentication | JWT (JSON Web Tokens) |
+| ORM | Entity Framework Core |
+| Deployment | Render |
+
+---
+
+## 🧑‍💻 Getting Started
+
+### Prerequisites
+Make sure you have the following installed:
+- [.NET 8 SDK](https://dotnet.microsoft.com/download)
+- Git
+- SQLite (optional; included by default)
+
+---
+
+### Deployment Link
+ - https://project-manager-appsian.onrender.com/swagger/index.html
+
+---
+
+### ⚙️ Setup Instructions
+
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/<your-username>/project-manager-app.git
+cd project-manager-app
+
+# 2️⃣ Restore dependencies
+dotnet restore
+
+# 3️⃣ Run the application
+dotnet run
