@@ -37,8 +37,10 @@ Make sure you have the following installed:
 
 ---
 
-### Deployment Link
- - https://project-manager-appsian.onrender.com/swagger/index.html
+### *Bonus Section - **
+ - 👉 **[View Deployment on Render](https://project-manager-appsian.onrender.com/swagger/index.html)**
+
+ - Implemented **SMART SCHEDULE API** by taking dependencies of each task and schedule them based on topological sort in Graph data structure algorithms.
 
 ---
 
