@@ -17,6 +17,17 @@ public class ProjectsController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetProjects() => Ok(await _svc.GetUserProjectsAsync(Username));
 
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetProject(int id)
+    {
+        try
+        {
+            var project = await _svc.GetProjectByIdAsync(Username, id);
+            return Ok(project);
+        }
+        catch (Exception ex) { return BadRequest(new { error = ex.Message }); }
+    }
+
     [HttpPost]
     public async Task<IActionResult> Create(ProjectCreateDto dto)
     {

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MiniProjectManager.Application.DTOs.Project;
+using MiniProjectManager.Application.DTOs.Task;
 using MiniProjectManager.Application.Interfaces;
 using MiniProjectManager.Infrastructure.Data;
 
@@ -32,5 +33,29 @@ public class ProjectService : IProjectService
         return await _db.Projects.Where(p => p.UserId == user.Id)
             .Select(p => new ProjectResponseDto { Id = p.Id, Title = p.Title, Description = p.Description, CreatedAt = p.CreatedAt })
             .ToListAsync();
+    }
+
+    public async Task<ProjectWithTasksDto> GetProjectByIdAsync(string username, int projectId)
+    {
+        var user = await _db.Users.FirstOrDefaultAsync(u => u.Username == username) ?? throw new Exception("User not found");
+        var project = await _db.Projects
+            .Include(p => p.Tasks)
+            .FirstOrDefaultAsync(p => p.Id == projectId && p.UserId == user.Id) ?? throw new Exception("Project not found");
+
+        return new ProjectWithTasksDto
+        {
+            Id = project.Id,
+            Title = project.Title,
+            Description = project.Description,
+            CreatedAt = project.CreatedAt,
+            Tasks = project.Tasks.Select(t => new TaskResponseDto
+            {
+                Id = t.Id,
+                Title = t.Title,
+                DueDate = t.DueDate,
+                IsCompleted = t.IsCompleted,
+                ProjectId = t.ProjectId
+            }).ToList()
+        };
     }
 }
